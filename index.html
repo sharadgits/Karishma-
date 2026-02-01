@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Karishma 💖</title>
+<style>
+body {
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #fff;
+  padding: 40px 15px;
+}
+.card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+button {
+  background: #fff;
+  color: #ff4b6e;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 30px;
+  font-size: 16px;
+}
+button:hover {
+  transform: scale(1.05);
+}
+.hidden {
+  display: none;
+}
+.heart {
+  font-size: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💘 Hey Karishma 💘</h1>
+<p>Yeh normal website nahi hai…<br>yeh ek feeling hai 🌹</p>
+
+<div class="card">
+  <p>Ready ho?</p>
+  <button onclick="next1()">Haan 💖</button>
+</div>
+
+<div class="card hidden" id="step1">
+  <p>Kabhi kabhi koi insaan chup-chaap zindagi mein aata hai…<br>aur bahut khaas ban jaata hai ✨</p>
+  <button onclick="next2()">Aage 🌸</button>
+</div>
+
+<div class="card hidden" id="step2">
+  <p>Ek choose karo 👀</p>
+  <button onclick="next3()">Surprise pasand hai 💌</button>
+  <button onclick="next3()">Thodi shy hoon 🙈</button>
+</div>
+
+<div class="card hidden" id="step3">
+  <p>
+    Karishma,<br><br>
+    Tum special ho.<br>
+    Tum appreciated ho.<br>
+    Aur tum moments ko beautiful bana deti ho 💖
+  </p>
+  <button onclick="next4()">Last baat… ❤️</button>
+</div>
+
+<div class="card hidden" id="step4">
+  <h2>🌹 Karishma 🌹</h2>
+  <p>Kya tum meri Valentine banogi?</p>
+  <div class="heart">❤️ 💗 ❤️</div>
+</div>
+
+<script>
+function next1(){ document.getElementById("step1").style.display="block"; }
+function next2(){ document.getElementById("step2").style.display="block"; }
+function next3(){ document.getElementById("step3").style.display="block"; }
+function next4(){ document.getElementById("step4").style.display="block"; }
+</script>
+
+</body>
+</html>

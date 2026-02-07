@@ -1,153 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>For Karishma 💖</title>
-<style>
-body {
-  margin:0;
-  padding:0;
-  background: linear-gradient(120deg, #ffedb3, #ffd6a5);
-  font-family: Arial, sans-serif;
-  color: #fff;
-  text-align: center;
-  overflow-x: hidden;
-}
-.card {
-  background: rgba(255,255,255,0.15);
-  border-radius: 20px;
-  padding: 25px;
-  margin: 20px auto;
-  max-width: 500px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 1;
-}
-.card:hover {
-  transform: scale(1.05);
-}
-button {
-  background: #fff;
-  color: #ff4b6e;
-  border: none;
-  padding: 12px 20px;
-  margin: 10px;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-button:hover {
-  transform: scale(1.1);
-}
-.hidden { display: none; }
-.heart { font-size: 30px; animation: float 2s infinite; }
-@keyframes float {
-  0% {transform: translateY(0px);}
-  50% {transform: translateY(-10px);}
-  100% {transform: translateY(0px);}
-}
-/* Floating hearts */
-.heart-bg {
-  position: fixed; top:0; left:0;
-  width:100%; height:100%;
-  pointer-events: none; z-index:0;
-}
-.heart-bg span {
-  position: absolute;
-  font-size: 20px;
-  animation: floatUp linear infinite;
-  color: #ff4b6e;
-}
-@keyframes floatUp {
-  0% {transform: translateY(100vh) rotate(0deg);}
-  100% {transform: translateY(-10vh) rotate(360deg);}
-}
-/* Subtle lightning effect */
-@keyframes lightning {
-  0%,100% {opacity:0;}
-  50% {opacity:0.3;}
-}
-.lightning {
-  position: fixed; top:0; left:0;
-  width:100%; height:100%;
-  background: linear-gradient(90deg, rgba(255,255,200,0.3), rgba(255,255,200,0));
-  pointer-events: none;
-  opacity:0;
-  z-index:0;
-  animation: lightning 0.2s infinite;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Propose Day 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(14px);
+      padding: 40px;
+      border-radius: 25px;
+      max-width: 520px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 25px 45px rgba(0,0,0,0.3);
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      display: none;
+      margin-top: 15px;
+    }
+
+    .heart {
+      font-size: 70px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    button {
+      padding: 12px 28px;
+      border-radius: 30px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 15px;
+      transition: 0.3s;
+    }
+
+    .yes {
+      background: #38b000;
+      color: white;
+    }
+
+    .no {
+      background: #d00000;
+      color: white;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+
+    .signature {
+      display: none;
+      margin-top: 25px;
+      font-style: italic;
+      font-size: 17px;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="heart-bg" id="hearts"></div>
+<div class="container">
+  <div class="heart">💖</div>
+  <h1 id="title">Karishma…</h1>
 
-<h1>💘 Hey Karishma 💘</h1>
-<p>This isn’t a normal website…<br>It’s a little adventure 💫</p>
-
-<div class="card">
-  <p>Are you ready ⚡?</p>
-  <button onclick="next1()">Yes 💖</button>
-</div>
-
-<div class="card hidden" id="step1">
-  <p>Sometimes someone enters your life quietly…<br>and suddenly everything feels magical ✨</p>
-  <button onclick="next2()">Next 🌸</button>
-</div>
-
-<div class="card hidden" id="step2">
-  <p>Choose your vibe 👀</p>
-  <button onclick="next3()">I love surprises 💌</button>
-  <button onclick="next3()">A bit shy 🙈</button>
-</div>
-
-<div class="card hidden" id="step3">
-  <p>
-    Karishma,<br><br>
-    You are truly special.<br>
-    You make every moment magical.<br>
-    And thinking about you… my heart ⚡ skips a beat 💖
+  <p id="s1">
+    Today is Propose Day 💍  
+    and I want to speak from my heart.
   </p>
-  <button onclick="next4()">Almost there… ❤️</button>
-</div>
 
-<div class="card hidden" id="step4">
-  <h2>🌹 Karishma 🌹</h2>
-  <p>Will you be my Valentine?</p>
-  <div class="heart">❤️ 💗 ❤️</div>
+  <p id="s2">
+    Before anything else,  
+    I want to say I am truly sorry 💔  
+    for every moment I hurt you.
+  </p>
+
+  <p id="s3">
+    You mean more to me than my mistakes,  
+    and I genuinely want to make things right.
+  </p>
+
+  <p id="question">
+    Karishma, will you be mine? ❤️
+  </p>
+
+  <div id="options" style="display:none;">
+    <button class="yes" onclick="yesClicked()">YES 💕</button>
+    <button class="no" onclick="noClicked()">NO 🙈</button>
+  </div>
+
+  <p id="yesMsg">
+    You just made my heart smile 💖  
+    I promise to respect you, care for you,  
+    and never take you for granted.  
+    Happy Propose Day, Karishma 🌹
+  </p>
+
+  <p id="noMsg1">
+    Oh… that hurt a little 😔
+  </p>
+
+  <p id="noMsg2">
+    But even this NO  
+    does not change how special you are to me.
+  </p>
+
+  <p id="noMsg3">
+    I still wish you a beautiful  
+    Propose Day, Karishma 🌹
+  </p>
+
+  <div class="signature" id="sign">
+    — With honesty and hope,<br>
+    <strong>Sharad</strong>
+  </div>
+
+  <button onclick="next()" id="nextBtn">Continue 💫</button>
 </div>
 
 <script>
-// Card transitions
-function next1(){ document.getElementById("step1").style.display="block"; }
-function next2(){ document.getElementById("step2").style.display="block"; }
-function next3(){ document.getElementById("step3").style.display="block"; }
-function next4(){ document.getElementById("step4").style.display="block"; }
+  let step = 0;
+  function next() {
+    const steps = ["s1","s2","s3","question"];
+    if (step < steps.length) {
+      document.getElementById(steps[step]).style.display = "block";
+      step++;
+      if (step === steps.length) {
+        document.getElementById("options").style.display = "block";
+        document.getElementById("nextBtn").style.display = "none";
+      }
+    }
+  }
 
-// Floating hearts
-const heartContainer = document.getElementById('hearts');
-function createHeart() {
-  const heart = document.createElement('span');
-  heart.innerText = '❤️';
-  heart.style.left = Math.random() * 100 + 'vw';
-  heart.style.fontSize = Math.random() * 24 + 12 + 'px';
-  heart.style.animationDuration = 4 + Math.random() * 3 + 's';
-  heartContainer.appendChild(heart);
-  setTimeout(()=>heart.remove(), 7000);
-}
-setInterval(createHeart, 500);
+  function yesClicked() {
+    document.getElementById("options").style.display = "none";
+    document.getElementById("yesMsg").style.display = "block";
+    document.getElementById("sign").style.display = "block";
+  }
 
-// Subtle lightning flashes
-function lightningFlash() {
-  const flash = document.createElement('div');
-  flash.className = 'lightning';
-  document.body.appendChild(flash);
-  setTimeout(()=>flash.remove(), 200);
-}
-setInterval(lightningFlash, 3000 + Math.random()*2000);
+  function noClicked() {
+    document.getElementById("options").style.display = "none";
+    document.getElementById("noMsg1").style.display = "block";
+    setTimeout(()=>document.getElementById("noMsg2").style.display="block",1500);
+    setTimeout(()=>document.getElementById("noMsg3").style.display="block",3000);
+    setTimeout(()=>document.getElementById("sign").style.display="block",4500);
+  }
 </script>
 
 </body>

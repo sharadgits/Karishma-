@@ -1,180 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Propose Day 💖</title>
+<meta charset="UTF-8">
+<title>Chocolate Day 🍫</title>
 
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Segoe UI', sans-serif;
-      overflow: hidden;
-    }
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:radial-gradient(circle at top,#7b4a2e,#3e2723);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Segoe UI',sans-serif;
+  overflow:hidden;
+}
 
-    .container {
-      background: rgba(255,255,255,0.25);
-      backdrop-filter: blur(14px);
-      padding: 40px;
-      border-radius: 25px;
-      max-width: 520px;
-      text-align: center;
-      color: #fff;
-      box-shadow: 0 25px 45px rgba(0,0,0,0.3);
-      animation: fadeIn 2s ease;
-    }
+/* Chocolate rain */
+.choco{
+  position:absolute;
+  font-size:28px;
+  animation:rain 7s linear infinite;
+  opacity:.9;
+}
+@keyframes rain{
+  0%{transform:translateY(-10vh) rotate(0deg);}
+  100%{transform:translateY(110vh) rotate(360deg);}
+}
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
+.card{
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(14px);
+  padding:40px;
+  border-radius:28px;
+  max-width:560px;
+  text-align:center;
+  color:#fff;
+  box-shadow:0 25px 50px rgba(0,0,0,.45);
+  animation:fade 1.8s ease;
+  z-index:2;
+}
 
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      display: none;
-      margin-top: 15px;
-    }
+h1{
+  font-size:32px;
+  margin-bottom:10px;
+}
 
-    .heart {
-      font-size: 70px;
-      animation: float 3s ease-in-out infinite;
-    }
+.teddy{
+  font-size:70px;
+  animation:float 3s ease-in-out infinite;
+}
 
-    button {
-      padding: 12px 28px;
-      border-radius: 30px;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 15px;
-      transition: 0.3s;
-    }
+.kitkat{
+  font-size:40px;
+  margin:10px 0;
+}
 
-    .yes {
-      background: #38b000;
-      color: white;
-    }
+p{
+  font-size:18px;
+  line-height:1.7;
+  display:none;
+  margin-top:15px;
+}
 
-    .no {
-      background: #d00000;
-      color: white;
-    }
+.buttons{
+  display:none;
+  margin-top:25px;
+  position:relative;
+  height:80px;
+}
 
-    button:hover {
-      transform: scale(1.08);
-    }
+button{
+  padding:12px 30px;
+  border-radius:30px;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  transition:.25s;
+  position:absolute;
+}
 
-    .signature {
-      display: none;
-      margin-top: 25px;
-      font-style: italic;
-      font-size: 17px;
-    }
+.yes{
+  background:#c62828;
+  color:#fff;
+  left:50%;
+  transform:translateX(-120%);
+}
 
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
+.no{
+  background:#6d4c41;
+  color:#fff;
+  left:50%;
+  transform:translateX(20%);
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-    }
-  </style>
+button:hover{
+  transform:scale(1.08);
+}
+
+.signature{
+  display:none;
+  margin-top:22px;
+  font-style:italic;
+  opacity:.9;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+@keyframes fade{
+  from{opacity:0;transform:scale(.9);}
+  to{opacity:1;transform:scale(1);}
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
-  <div class="heart">💖</div>
+<!-- chocolate rain -->
+<div class="choco" style="left:5%;animation-delay:0s;">🍫</div>
+<div class="choco" style="left:20%;animation-delay:2s;">🍫</div>
+<div class="choco" style="left:40%;animation-delay:1s;">🍫</div>
+<div class="choco" style="left:60%;animation-delay:3s;">🍫</div>
+<div class="choco" style="left:80%;animation-delay:4s;">🍫</div>
+
+<div class="card">
+
+  <!-- teddy scene -->
+  <div class="teddy">🧸💝🧸</div>
+  <div class="kitkat">🍫 KITKAT 🍫</div>
+
   <h1 id="title">Karishma…</h1>
 
-  <p id="s1">
-    Today is Propose Day 💍  
-    and I want to speak from my heart.
+  <p id="t1">
+    Imagine this little teddy 🧸  
+    shyly offering a KitKat 🍫  
+    just to see you smile.
   </p>
 
-  <p id="s2">
-    Before anything else,  
-    I want to say I am truly sorry 💔  
-    for every moment I hurt you.
+  <p id="t2">
+    Karishma, I want to say this from my heart —
+    I’m truly sorry 💔
+    for my mistakes.
   </p>
 
-  <p id="s3">
-    You mean more to me than my mistakes,  
-    and I genuinely want to make things right.
+  <p id="t3">
+    Like chocolate melts slowly,
+    my heart melts thinking about you.
+  </p>
+
+  <p id="t4">
+    On this Chocolate Day 🍫  
+    with all sweetness and honesty…
   </p>
 
   <p id="question">
-    Karishma, will you be mine? ❤️
+    Will you accept this KitKat 🍫  
+    from me and give us a sweet chance? ❤️
   </p>
 
-  <div id="options" style="display:none;">
-    <button class="yes" onclick="yesClicked()">YES 💕</button>
-    <button class="no" onclick="noClicked()">NO 🙈</button>
+  <div class="buttons" id="buttons">
+    <button class="yes" onclick="yesClick()">YES 🍫🧸</button>
+    <button class="no" id="noBtn" onmouseover="moveNo()">NO 🙈</button>
   </div>
 
   <p id="yesMsg">
-    You just made my heart smile 💖  
-    I promise to respect you, care for you,  
-    and never take you for granted.  
-    Happy Propose Day, Karishma 🌹
-  </p>
-
-  <p id="noMsg1">
-    Oh… that hurt a little 😔
-  </p>
-
-  <p id="noMsg2">
-    But even this NO  
-    does not change how special you are to me.
-  </p>
-
-  <p id="noMsg3">
-    I still wish you a beautiful  
-    Propose Day, Karishma 🌹
+    You just made this teddy jump with joy 🧸💖  
+    I promise to care, respect,
+    and never take you for granted again.  
+    Happy Chocolate Day, Karishma 🍫❤️
   </p>
 
   <div class="signature" id="sign">
-    — With honesty and hope,<br>
+    — With apology, chocolates & love,<br>
     <strong>Sharad</strong>
   </div>
 
-  <button onclick="next()" id="nextBtn">Continue 💫</button>
+  <button id="nextBtn" onclick="next()">Open the Chocolate 🍫</button>
 </div>
 
 <script>
-  let step = 0;
-  function next() {
-    const steps = ["s1","s2","s3","question"];
-    if (step < steps.length) {
-      document.getElementById(steps[step]).style.display = "block";
-      step++;
-      if (step === steps.length) {
-        document.getElementById("options").style.display = "block";
-        document.getElementById("nextBtn").style.display = "none";
-      }
+let step=0;
+const texts=["t1","t2","t3","t4","question"];
+
+function next(){
+  if(step<texts.length){
+    document.getElementById(texts[step]).style.display="block";
+    step++;
+    if(step===texts.length){
+      document.getElementById("buttons").style.display="block";
+      document.getElementById("nextBtn").style.display="none";
     }
   }
+}
 
-  function yesClicked() {
-    document.getElementById("options").style.display = "none";
-    document.getElementById("yesMsg").style.display = "block";
-    document.getElementById("sign").style.display = "block";
-  }
+function yesClick(){
+  document.getElementById("buttons").style.display="none";
+  document.getElementById("yesMsg").style.display="block";
+  document.getElementById("sign").style.display="block";
+}
 
-  function noClicked() {
-    document.getElementById("options").style.display = "none";
-    document.getElementById("noMsg1").style.display = "block";
-    setTimeout(()=>document.getElementById("noMsg2").style.display="block",1500);
-    setTimeout(()=>document.getElementById("noMsg3").style.display="block",3000);
-    setTimeout(()=>document.getElementById("sign").style.display="block",4500);
-  }
+function moveNo(){
+  const btn=document.getElementById("noBtn");
+  const x=Math.random()*200-100;
+  const y=Math.random()*60-30;
+  btn.style.transform=`translate(${x}px,${y}px)`;
+}
 </script>
 
 </body>

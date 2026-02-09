@@ -1,1 +1,214 @@
-      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chocolate Day 🍫</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:radial-gradient(circle at top,#7b4a2e,#3e2723);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Segoe UI',sans-serif;
+  overflow:hidden;
+}
+
+/* Chocolate rain */
+.choco{
+  position:absolute;
+  font-size:28px;
+  animation:rain 7s linear infinite;
+  opacity:.9;
+}
+@keyframes rain{
+  0%{transform:translateY(-10vh) rotate(0deg);}
+  100%{transform:translateY(110vh) rotate(360deg);}
+}
+
+.card{
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(14px);
+  padding:40px;
+  border-radius:28px;
+  max-width:560px;
+  text-align:center;
+  color:#fff;
+  box-shadow:0 25px 50px rgba(0,0,0,.45);
+  animation:fade 1.8s ease;
+  z-index:2;
+}
+
+h1{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.teddy{
+  font-size:70px;
+  animation:float 3s ease-in-out infinite;
+}
+
+.kitkat{
+  font-size:40px;
+  margin:10px 0;
+}
+
+p{
+  font-size:18px;
+  line-height:1.7;
+  display:none;
+  margin-top:15px;
+}
+
+.buttons{
+  display:none;
+  margin-top:25px;
+  position:relative;
+  height:80px;
+}
+
+button{
+  padding:12px 30px;
+  border-radius:30px;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  transition:.25s;
+  position:absolute;
+}
+
+.yes{
+  background:#c62828;
+  color:#fff;
+  left:50%;
+  transform:translateX(-120%);
+}
+
+.no{
+  background:#6d4c41;
+  color:#fff;
+  left:50%;
+  transform:translateX(20%);
+}
+
+button:hover{
+  transform:scale(1.08);
+}
+
+.signature{
+  display:none;
+  margin-top:22px;
+  font-style:italic;
+  opacity:.9;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+@keyframes fade{
+  from{opacity:0;transform:scale(.9);}
+  to{opacity:1;transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- chocolate rain -->
+<div class="choco" style="left:5%;animation-delay:0s;">🍫</div>
+<div class="choco" style="left:20%;animation-delay:2s;">🍫</div>
+<div class="choco" style="left:40%;animation-delay:1s;">🍫</div>
+<div class="choco" style="left:60%;animation-delay:3s;">🍫</div>
+<div class="choco" style="left:80%;animation-delay:4s;">🍫</div>
+
+<div class="card">
+
+  <!-- teddy scene -->
+  <div class="teddy">🧸💝🧸</div>
+  <div class="kitkat">🍫 KITKAT 🍫</div>
+
+  <h1 id="title">Karishma…</h1>
+
+  <p id="t1">
+    Imagine this little teddy 🧸  
+    shyly offering a KitKat 🍫  
+    just to see you smile.
+  </p>
+
+  <p id="t2">
+    Karishma, I want to say this from my heart —
+    I’m truly sorry 💔
+    for my mistakes.
+  </p>
+
+  <p id="t3">
+    Like chocolate melts slowly,
+    my heart melts thinking about you.
+  </p>
+
+  <p id="t4">
+    On this Chocolate Day 🍫  
+    with all sweetness and honesty…
+  </p>
+
+  <p id="question">
+    Will you accept this KitKat 🍫  
+    from me and give us a sweet chance? ❤️
+  </p>
+
+  <div class="buttons" id="buttons">
+    <button class="yes" onclick="yesClick()">YES 🍫🧸</button>
+    <button class="no" id="noBtn" onmouseover="moveNo()">NO 🙈</button>
+  </div>
+
+  <p id="yesMsg">
+    You just made this teddy jump with joy 🧸💖  
+    I promise to care, respect,
+    and never take you for granted again.  
+    Happy Chocolate Day, Karishma 🍫❤️
+  </p>
+
+  <div class="signature" id="sign">
+    — With apology, chocolates & love,<br>
+    <strong>Sharad</strong>
+  </div>
+
+  <button id="nextBtn" onclick="next()">Open the Chocolate 🍫</button>
+</div>
+
+<script>
+let step=0;
+const texts=["t1","t2","t3","t4","question"];
+
+function next(){
+  if(step<texts.length){
+    document.getElementById(texts[step]).style.display="block";
+    step++;
+    if(step===texts.length){
+      document.getElementById("buttons").style.display="block";
+      document.getElementById("nextBtn").style.display="none";
+    }
+  }
+}
+
+function yesClick(){
+  document.getElementById("buttons").style.display="none";
+  document.getElementById("yesMsg").style.display="block";
+  document.getElementById("sign").style.display="block";
+}
+
+function moveNo(){
+  const btn=document.getElementById("noBtn");
+  const x=Math.random()*200-100;
+  const y=Math.random()*60-30;
+  btn.style.transform=`translate(${x}px,${y}px)`;
+}
+</script>
+
+</body>
+</html>
